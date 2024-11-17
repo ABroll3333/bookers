@@ -1,0 +1,19 @@
+<% if flash[:success] %>
+  <div class="alert alert-success">
+    <%= flash[:success] %>
+  </div>
+<% end %>
+<% if flash[:error] %>
+  <div class="alert alert-danger">
+    <%= flash[:error] %>
+  </div>
+<% end %>
+<h2>Title:</h2>
+<p><%= @book.title %></p>
+
+<h2>Body:</h2>
+<p><%= @book.body %></p>
+
+<a class="edit" href="<%= edit_book_path(@book) %>">Edit</a>
+|
+<a class="back" href="/books">Back</a>
